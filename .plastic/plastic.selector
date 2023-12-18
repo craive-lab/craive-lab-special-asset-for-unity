@@ -1,4 +1,0 @@
-repository "craive-lab-special-assets-unity@CRAIVE@cloud"
-  path "/"
-    br "/main"
-    co "/main"
