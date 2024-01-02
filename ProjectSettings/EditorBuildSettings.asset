@@ -5,11 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/C00_Common/Slides.unity
     guid: 6da7e01301b810a40a2cecaa3645f8b8
-  - enabled: 1
-    path: Assets/C01_FPS/Scenes/C01_FPS.unity
+  - enabled: 0
+    path: Assets/C01_Control/Scenes/C01_FPS.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 0
+    path: Assets/C03_Slides/Scenes/C03_Slides.unity
+    guid: c1d1954d4bfe003479e10579c594b3d5
+  - enabled: 1
+    path: Assets/C02_Audio/Scenes/C02_OSC.unity
+    guid: 3c45035ee7a9fc241a3e5db29e05f0d4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
+  m_UseUCBPForAssetBundles: 0

@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace EMPACResearch.Core.Audio
@@ -45,12 +44,29 @@ namespace EMPACResearch.Core.Audio
 
         [SerializeField]
         bool useDopplerEffect;
+        enum DistanceRolloffMode { Linear, Logarithmic }
+        
+        [SerializeField]
+        DistanceRolloffMode distanceRolloffMode = DistanceRolloffMode.Linear;
+
+        [SerializeField, Range(-30f, -0.01f)]
+        float distanceRolloff = -1f;
 
         [SerializeField, Range(90f, 180f)]
         float ambientAperture = 180f;
 
         [SerializeField, Range(-72f, 0f)]
         float backgroundLevel = -30f;
+
+        [Header("Troubleshooting")]
+        [SerializeField]
+        bool debug;
+
+        enum DebugParameter { Position, Gain, Doppler }
+
+        [SerializeField]
+        DebugParameter debugParameter = DebugParameter.Gain;
+        
 
 
         /// <summary>
@@ -77,8 +93,12 @@ namespace EMPACResearch.Core.Audio
         {
             /* Detect virtual sound sources in the environment if none is 
              * manually assigned. */
-            if (autoDetect) virtualSoundSources = 
-                GameObject.FindGameObjectsWithTag("SoundSource");
+            if (autoDetect)
+            {
+                if (virtualSoundSources != null) return;
+                else virtualSoundSources = 
+                        GameObject.FindGameObjectsWithTag("SoundSource");
+            }
 
         }
 
@@ -122,11 +142,15 @@ namespace EMPACResearch.Core.Audio
                 // if (useObjectTrigger) SendObjectTriggerStatus(i, 1); // to be implemented
                 if (useDistancedGain)
                 {
-                    relativeDistances[i] = Vector3.Distance(virtualSoundSources[i].transform.position, controllerPosition);
-                    
+                    relativeDistances[i] = Vector3.Distance(
+                        virtualSoundSources[i].transform.position, controllerPosition
+                        );
                 }
             }
-            if (useDistancedGain) SendDistancedGain(relativeDistances);
+            if (useDistancedGain)
+            {
+                SendDistancedGain(relativeDistances, distanceRolloff);
+            }
 
         }
 
@@ -144,12 +168,6 @@ namespace EMPACResearch.Core.Audio
             /* When the session ends, first clear the virtual sound sources
              * to avoid memory leak. */
             if (virtualSoundSources != null) virtualSoundSources = null;
-        }
-
-
-        private void OnDestroy()
-        {
-            SendPlaybackStatus(0);
         }
 
 
@@ -190,7 +208,8 @@ namespace EMPACResearch.Core.Audio
 
                 /* Calculate the relative angle between the controller's heading 
                  * and the direction of the virtual sound source. */ 
-                relativeAngle = Mathf.Deg2Rad * (controllerHeading + referenceAngle);
+                relativeAngle = 
+                    Mathf.Deg2Rad * (controllerHeading + referenceAngle);
 
                 /* Finally, calculate the relative positions based upon the 
                  * relative angle. */
@@ -244,7 +263,9 @@ namespace EMPACResearch.Core.Audio
             msg.values.Add(position.x);    
             msg.values.Add(position.z);
             osc.Send(msg);
-            Debug.Log(msg);
+
+            if (debug && debugParameter == DebugParameter.Position)
+                Debug.Log(msg);
         }
 
 
@@ -255,12 +276,18 @@ namespace EMPACResearch.Core.Audio
             msg.address = "/distances";
             for (int i = 0; i < distances.Length; i++) 
             {
-                float gain = (distances[i] * rollOff < -70f) ?
-                    -70f : distances[i] * rollOff;
+                float distancedGain = (distances[i] < 6.9f) ? 0f : 
+                    (distanceRolloffMode == DistanceRolloffMode.Linear) ? 
+                    (distances[i] - 6.9f) * rollOff: 
+                    Mathf.Log(distances[i] - 6.9f, 2f) * rollOff; 
+                float gain = (distancedGain < -70f) ?
+                    -70f : distancedGain;
                 msg.values.Add(gain);
             }
             osc.Send(msg);
-            Debug.Log(msg);
+
+            if (debug && debugParameter == DebugParameter.Gain) 
+                Debug.Log(msg);
         }
 
 
@@ -270,7 +297,9 @@ namespace EMPACResearch.Core.Audio
             msg.address = "/source/" + (id + 1).ToString() + "/doppler";
             msg.values.Add(status);
             osc.Send(msg);
-            Debug.Log(msg);
+
+            if (debug && debugParameter == DebugParameter.Doppler)
+                Debug.Log(msg);
         }
 
 

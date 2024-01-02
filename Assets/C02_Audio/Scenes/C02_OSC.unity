@@ -245,6 +245,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 578157848219928374, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: Chime
+      objectReference: {fileID: 0}
+    - target: {fileID: 578157848219928374, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
       value: SoundSource
       objectReference: {fileID: 0}
@@ -257,8 +261,16 @@ PrefabInstance:
       value: Environment_02
       objectReference: {fileID: 0}
     - target: {fileID: 4690387088917063085, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: Space
+      objectReference: {fileID: 0}
+    - target: {fileID: 4690387088917063085, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
       value: SoundSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578330197287361963, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: City
       objectReference: {fileID: 0}
     - target: {fileID: 5578330197287361963, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
@@ -305,6 +317,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191632041901213724, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: Cardinal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191632041901213724, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
       value: SoundSource
       objectReference: {fileID: 0}
@@ -313,8 +329,16 @@ PrefabInstance:
       value: SoundSource
       objectReference: {fileID: 0}
     - target: {fileID: 8626650228302814161, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: Desert
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626650228302814161, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
       value: SoundSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153280220874763690, guid: 57d874d491124974384555004fb42006, type: 3}
+      propertyPath: m_Name
+      value: Rainforest
       objectReference: {fileID: 0}
     - target: {fileID: 9153280220874763690, guid: 57d874d491124974384555004fb42006, type: 3}
       propertyPath: m_TagString
@@ -325,17 +349,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d874d491124974384555004fb42006, type: 3}
---- !u!114 &696050026 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1471427979254989462, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
-  m_PrefabInstance: {fileID: 7495413589624150828}
+--- !u!1 &405303935 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8322000481712194497, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfdabb4ef382665479cdabfb34904635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+--- !u!1 &474353916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5578330197287361963, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &541906232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8626650228302814161, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &557016273 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9153280220874763690, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1061568912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -509,6 +542,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9da8b53fba2f344b8a37f4cd8b929bf, type: 3}
+--- !u!1 &1192652470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1582476338290069808, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1415275227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 578157848219928374, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1897961379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4690387088917063085, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2074927300 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7191632041901213724, guid: 57d874d491124974384555004fb42006, type: 3}
+  m_PrefabInstance: {fileID: 209540127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2110091219 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2013962963274267821, guid: d9da8b53fba2f344b8a37f4cd8b929bf, type: 3}
@@ -569,7 +622,15 @@ PrefabInstance:
     - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
       propertyPath: osc
       value: 
-      objectReference: {fileID: 696050026}
+      objectReference: {fileID: 7495413589624150832}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: autoDetect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
       propertyPath: controller
       value: 
@@ -577,6 +638,10 @@ PrefabInstance:
     - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
       propertyPath: backgroundLevel
       value: -72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: distanceRolloff
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
       propertyPath: backgroundSpread
@@ -587,9 +652,45 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
-      propertyPath: virtualSoundSources.Array.size
+      propertyPath: distanceRolloffMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: virtualSoundSources.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[0]'
+      value: 
+      objectReference: {fileID: 474353916}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2074927300}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[2]'
+      value: 
+      objectReference: {fileID: 541906232}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1415275227}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[4]'
+      value: 
+      objectReference: {fileID: 557016273}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[5]'
+      value: 
+      objectReference: {fileID: 405303935}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[6]'
+      value: 
+      objectReference: {fileID: 1192652470}
+    - target: {fileID: 8120771760847937593, guid: 2a8d7a0366154a44d86c8c98e0fa149b, type: 3}
+      propertyPath: 'virtualSoundSources.Array.data[7]'
+      value: 
+      objectReference: {fileID: 1897961379}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -649,17 +750,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1471427979254989462, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
       propertyPath: outIP
-      value: 127.0.0.1
+      value: 129.161.12.215
       objectReference: {fileID: 0}
     - target: {fileID: 1471427979254989462, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
       propertyPath: outPort
-      value: 4286
+      value: 7647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471427979254989462, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
+--- !u!114 &7495413589624150832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1471427979254989462, guid: a36e64c731666714495713aa5b5fffeb, type: 3}
+  m_PrefabInstance: {fileID: 7495413589624150828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfdabb4ef382665479cdabfb34904635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
