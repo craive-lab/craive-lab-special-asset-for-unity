@@ -44,6 +44,12 @@ namespace EMPACResearch.Core.Audio
 
         [SerializeField]
         bool useDopplerEffect;
+
+        enum DistanceMode { Euclidean2D, Euclidean3D }
+
+        [SerializeField] 
+        DistanceMode distanceMode = DistanceMode.Euclidean3D;
+
         enum DistanceRolloffMode { Linear, Logarithmic }
         
         [SerializeField]
@@ -259,10 +265,22 @@ namespace EMPACResearch.Core.Audio
         void SendSourcePosition(int id, Vector3 position)
         {
             OscMessage msg = new OscMessage();
-            msg.address = "/source/" + (id + 1).ToString() + "/xy";
-            msg.values.Add(position.x);    
-            msg.values.Add(position.z);
-            osc.Send(msg);
+
+            if (distanceMode == DistanceMode.Euclidean2D)
+            {
+                msg.address = "/source/" + (id + 1).ToString() + "/xy";
+                msg.values.Add(position.x);
+                msg.values.Add(position.z);
+                osc.Send(msg);
+            }
+            else if (distanceMode == DistanceMode.Euclidean3D)
+            {
+                msg.address = "/source/" + (id + 1).ToString() + "/xyz";
+                msg.values.Add(position.x);
+                msg.values.Add(position.z);
+                msg.values.Add(position.y);
+                osc.Send(msg);
+            }
 
             if (debug && debugParameter == DebugParameter.Position)
                 Debug.Log(msg);
