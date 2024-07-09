@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/C00_Common/Slides.unity
     guid: 6da7e01301b810a40a2cecaa3645f8b8
   - enabled: 0
-    path: Assets/C01_Control/Scenes/C01_FPS.unity
+    path: Assets/C01_DigitalTwin/Scenes/C01_FPS.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/C03_Exhibit/Scenes/C03_Slides.unity
