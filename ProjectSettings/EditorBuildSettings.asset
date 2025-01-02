@@ -9,19 +9,19 @@ EditorBuildSettings:
     path: Assets/C00_Common/Slides.unity
     guid: 6da7e01301b810a40a2cecaa3645f8b8
   - enabled: 0
-    path: Assets/DigitalTwin/Scenes/DigitalTwin.unity
+    path: Assets/Iris/DigitalTwin/Scenes/DigitalTwin.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Exhibit/Scenes/StaticExhibit.unity
+    path: Assets/Iris/Exhibit/Scenes/StaticExhibit.unity
     guid: c1d1954d4bfe003479e10579c594b3d5
   - enabled: 0
-    path: Assets/Soundscape/Scenes/SoundscapeOSC.unity
+    path: Assets/Iris/Soundscape/Scenes/SoundscapeOSC.unity
     guid: 3c45035ee7a9fc241a3e5db29e05f0d4
   - enabled: 1
-    path: Assets/Soundscape/Scenes/Soundscape2D.unity
+    path: Assets/Iris/Soundscape/Scenes/Soundscape2D.unity
     guid: 18db4d7e800922441890dbffe2ea872e
   - enabled: 1
-    path: Assets/Soundscape/Scenes/Soundscape3D.unity
+    path: Assets/Iris/Soundscape/Scenes/Soundscape3D.unity
     guid: 0b206de46653c4343a7cd49220c21060
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
